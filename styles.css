@@ -24,4 +24,22 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+  opacity: 1;
+}
+
+.tiny-dancer{
+  border:3px solid white;
+  border-radius:3px;
+  position:absolute;
+
+}
+
+.white{
+  border-color: white;
+}
+
+.below-grow{
+  border:20px solid green;
+  border-radius:20px;
+  margin-top: -30px;
 }
