@@ -10,7 +10,6 @@ $(document).ready(function(){
 
     var dancer = new dancerMakerFunction(-20,-300,40);
     $('body').append(dancer.$node);
-    window.dancers.push(dancer);
     var song = $('.song').get(0);
     song.play();
   })
