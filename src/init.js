@@ -1,6 +1,16 @@
 $(document).ready(function(){
   window.dancers = [];
+  $(".addWreckingBall").on("click", function(event) {
+    var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
 
+    // get the maker function for the kind of dancer we're supposed to make
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+    // make a dancer with a random position
+
+    var dancer = new dancerMakerFunction(175,10,40);
+    $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+  })
   $(".addDancerButton").on("click", function(event){
 
     /* dancerMakerFunctionName is a string which must match
@@ -12,7 +22,6 @@ $(document).ready(function(){
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
@@ -31,7 +40,7 @@ $(document).ready(function(){
     };
   });
 
-  $("body").on("click",".mousey", function(event){
+  $("body").on("click",".dancer", function(event){
     $(this).remove();
   })
 
