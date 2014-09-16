@@ -78,6 +78,17 @@ body, a:link, a:visited, a:active{
   background-size: 100%;
   position:absolute;
   opacity: 1;
-  width: 300px;
-  height: 500px;
+  width: 600px;
+  height: 1000px;
+}
+.addWreckingBall {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+
+.explosion{
+  background: url("img/explosion.gif") no-repeat;
+  background-size: 100%;
 }

@@ -1,15 +1,18 @@
 $(document).ready(function(){
   window.dancers = [];
   $(".addWreckingBall").on("click", function(event) {
+
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
 
-    var dancer = new dancerMakerFunction(175,10,40);
+    var dancer = new dancerMakerFunction(-20,-300,40);
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+    var song = $('.song').get(0);
+    song.play();
   })
   $(".addDancerButton").on("click", function(event){
 
@@ -41,7 +44,11 @@ $(document).ready(function(){
   });
 
   $("body").on("click",".dancer", function(event){
-    $(this).remove();
+    $(this).addClass("explosion");
+    var removee = $(this);
+    setTimeout(function() {
+      removee.remove();
+    }, 820)
   })
 
 
