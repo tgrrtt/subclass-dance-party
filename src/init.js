@@ -53,6 +53,16 @@ $(document).ready(function(){
     $(".score").text(score)
   })
 
+  $("body").on("mouseover",".shy", function(event){
+    console.log($(this).attr("id"));
+    for (var i = 0; i < window.dancers.length; i++) {
+      if (window.dancers[i].id == $(this).attr("id")) {
+        window.dancers[i].runAway();
+      }
+    };
+
+  })
+
 
 });
 

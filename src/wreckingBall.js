@@ -12,8 +12,8 @@ var WreckingBall = function(top,left,timeBetweenSteps) {
 WreckingBall.prototype = Object.create(Dancer.prototype);
 WreckingBall.prototype.constructor = WreckingBall;
 WreckingBall.prototype.step = function() {
-  this.left += 8;
-  this.right += 8;
+  this.left += 10;
+  this.right += 10;
   this.setPosition.call(this);
   for (var i = 0; i < window.dancers.length; i++) {
     var targetDancer = window.dancers[i];
@@ -22,7 +22,12 @@ WreckingBall.prototype.step = function() {
     }
 
   }
-  $('.dancefloor').toggleClass("flash")
+  $('.dancefloor').toggleClass("flash");
+
+  if (this.left > ($("body").height() + 600)) {
+    this.$node.trigger('click');
+    $('.dancefloor').removeClass("flash");
+  }
 
   Dancer.prototype.step.call(this);
 };
@@ -30,6 +35,7 @@ WreckingBall.prototype.lineUp = function() {
   this.left = 100;
   this.setPosition.call(this);
 };
+
 
 // get wreckingball offsets
 // get all other dancers
