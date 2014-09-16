@@ -1,5 +1,6 @@
 $(document).ready(function(){
   window.dancers = [];
+  var score = 0;
   $(".addWreckingBall").on("click", function(event) {
 
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
@@ -28,7 +29,7 @@ $(document).ready(function(){
 
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random() * 0.7 + 100,
-      $("body").width() * Math.random()  * 0.7 + 100,
+      $("body").width() * Math.random()  * 0.7 + 300,
       Math.random() * 1500
     );
       $('body').append(dancer.$node);
@@ -48,6 +49,8 @@ $(document).ready(function(){
     setTimeout(function() {
       removee.remove();
     }, 820)
+    score++;
+    $(".score").text(score)
   })
 
 

@@ -15,6 +15,6 @@ TwerkDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
 };
 TwerkDancer.prototype.lineUp = function() {
-  this.left = 100;
+  this.left = 1400;
   this.setPosition.call(this);
 };
