@@ -9,7 +9,7 @@ $(document).ready(function(){
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
 
-    var dancer = new dancerMakerFunction(-20,-300,40);
+    var dancer = new dancerMakerFunction(-20,-300,60);
     $('body').append(dancer.$node);
     var song = $('.song').get(0);
     song.play();
@@ -30,7 +30,7 @@ $(document).ready(function(){
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random() * 0.7 + 100,
       $("body").width() * Math.random()  * 0.7 + 300,
-      Math.random() * 1500
+      Math.random() * 800
     );
       $('body').append(dancer.$node);
       window.dancers.push(dancer);

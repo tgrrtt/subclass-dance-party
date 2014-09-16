@@ -12,17 +12,18 @@ var WreckingBall = function(top,left,timeBetweenSteps) {
 WreckingBall.prototype = Object.create(Dancer.prototype);
 WreckingBall.prototype.constructor = WreckingBall;
 WreckingBall.prototype.step = function() {
-  this.left += 6;
-  this.right += 6;
+  this.left += 8;
+  this.right += 8;
   this.setPosition.call(this);
   for (var i = 0; i < window.dancers.length; i++) {
     var targetDancer = window.dancers[i];
     if (this.right >= targetDancer.left && this.right < targetDancer.right) {
       targetDancer.$node.trigger("click");
-      //debugger;
     }
+
   }
-  //if this.right > object.left && this.right < object.right
+  $('.dancefloor').toggleClass("flash")
+
   Dancer.prototype.step.call(this);
 };
 WreckingBall.prototype.lineUp = function() {
