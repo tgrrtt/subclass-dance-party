@@ -13,6 +13,6 @@ TwerkDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
 };
 TwerkDancer.prototype.lineUp = function() {
-  var line = 200 + 30*Math.random();
-  this.$node.css({left: line});
+  this.left = 100;
+  this.setPosition.call(this);
 };

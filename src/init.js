@@ -18,7 +18,7 @@ $(document).ready(function(){
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random() * 0.7 + 100,
       $("body").width() * Math.random()  * 0.7 + 100,
-      40
+      Math.random() * 1500
     );
       $('body').append(dancer.$node);
       window.dancers.push(dancer);
@@ -29,6 +29,10 @@ $(document).ready(function(){
       //set windowdancers position to left 30;
       window.dancers[i].lineUp()
     };
+  });
+
+  $("body").on("click",".mousey", function(event){
+    $(this).remove();
   })
 
 
