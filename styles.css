@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background: url("img/dancefloor.jpg") no-repeat;
+  background-size: 100%;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -42,4 +43,15 @@ body, a:link, a:visited, a:active{
   border:20px solid green;
   border-radius:20px;
   margin-top: -30px;
+}
+
+.twerk {
+  border:0 solid red;
+  border-radius:0;
+  position:absolute;
+  opacity: 1;
+  background: url("img/miley.png");
+  height: 150px;
+  width: 150px;
+  background-size: 100%;
 }
