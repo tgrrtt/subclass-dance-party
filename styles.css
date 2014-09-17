@@ -44,7 +44,10 @@ a:hover, a:visited, a {
   -moz-box-shadow: 0 0 0 0 #6B0702;
   -webkit-box-shadow: 0 0 0 0 #6B0702;
 }
-
+h1 {
+  padding: 0 0;
+  margin: 1800px auto;
+}
 .sb {
   color: white;
   width: 80px;

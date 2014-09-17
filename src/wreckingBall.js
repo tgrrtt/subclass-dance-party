@@ -24,7 +24,7 @@ WreckingBall.prototype.step = function() {
   }
   $('.dancefloor').toggleClass("flash");
 
-  if (this.left > ($("body").height() + 600)) {
+  if (this.right > ($("body").width() + 450)) {
     this.$node.trigger('click');
     $('.dancefloor').removeClass("flash");
   }
